@@ -19,15 +19,31 @@
   <body>
     <header>
       <nav class="main-nav flex">
-        <div class="logo">Pokedex</div>
+        <div class="logo"><h1>Pokedex</h1></div>
         <div class="nav-search-bar">
-          <input type="text" />
+          <ion-icon class="search-icon" name="search-outline"></ion-icon>
+          <input type="text" id="search-input" placeholder="Busca un pokemon" />
         </div>
         <div class="pokeball"></div>
       </nav>
     </header>
     <main>
       <section class="section-index grid">
+        <div class="index-card">
+          <p class="number" id="pokemon-number">#001</p>
+          <picture>
+            <img src="#" alt="Bulbasaur" id="pokemon-img" />
+          </picture>
+          <h2 class="heading-seconary" id="pokemon-name">Bulbasaur</h2>
+        </div>
+        <div class="index-card">
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <h2 class="heading-seconary">Bulbasaur</h2>
+          <p class="kind">Planta</p>
+          <p class="number">#001</p>
+        </div>
         <div class="index-card">
           <picture>
             <img src="#" alt="Bulbasaur" />
