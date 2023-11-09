@@ -1,0 +1,84 @@
+:root {
+  --ff-primary: "Overpass", sans-serif;
+  --ff-secondary: ;
+
+  --fw-normal: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --crl-red: hsl(0, 78%, 62%);
+  --crl-light-red: hsl(0, 78%, 98%);
+  --crl-green: hsl(180, 62%, 55%);
+  --crl-light-green: hsl(180, 62%, 98%);
+  --crl-orange: hsl(34, 97%, 64%);
+  --crl-light-orange: hsl(34, 97%, 98%);
+  --crl-blue: hsl(212, 86%, 64%);
+  --crl-light-blue: hsl(212, 86%, 98%);
+
+  --crl-white: hsl(0, 0%, 100%);
+  --crl-light-gray: hsl(216, 12%, 80%);
+  --crl--gray: hsl(216, 12%, 22%);
+  --crl-light-dark: hsl(213, 19%, 18%);
+  --crl-dark: hsl(216, 12%, 8%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* display: grid;
+  place-items: center; */
+  min-height: 100vh;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-normal);
+  line-height: 1.5;
+}
+
+img,
+svg,
+picture {
+  /* display: block; Testing of harry roberts default properties for img */
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  shape-margin: 1rem;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}

@@ -4,10 +4,92 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script defer src="script.js"></script>
     <title>PP | Personal Pokedex</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="main-nav flex">
+        <div class="logo">Pokedex</div>
+        <div class="nav-search-bar">
+          <input type="text" />
+        </div>
+        <div class="pokeball"></div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-index grid">
+        <div class="index-card">
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <h2 class="heading-seconary">Bulbasaur</h2>
+          <p class="kind">Planta</p>
+          <p class="number">#001</p>
+        </div>
+        <div class="index-card">
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <h2 class="heading-seconary">Bulbasaur</h2>
+          <p class="kind">Planta</p>
+          <p class="number">#001</p>
+        </div>
+        <div class="index-card">
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <h2 class="heading-seconary">Bulbasaur</h2>
+          <p class="kind">Planta</p>
+          <p class="number">#001</p>
+        </div>
+        <div class="index-card">
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <h2 class="heading-seconary">Bulbasaur</h2>
+          <span class="kind">Planta</span>
+          <span class="number">#001</span>
+        </div>
+      </section>
+
+      <section class="section-card hidden">
+        <h1>Bulbasaur</h1>
+        <span class="kind">Planta</span>
+        <span class="number">#001</span>
+        <picture>
+          <img src="#" alt="Bulbasaur" />
+        </picture>
+        <p class="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+          dignissimos illo neque doloremque delectus incidunt vel, quaerat
+          accusantium non cupiditate est iusto corporis sequi nam sint
+          necessitatibus voluptatem quam quia?
+        </p>
+        <div class="stats">
+          <p>Altura</p>
+          <span>2'44"</span>
+          <p>Peso</p>
+          <span>20kg</span>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

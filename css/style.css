@@ -1,0 +1,37 @@
+.main-nav {
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav-search-bar {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-search-bar input {
+  width: 80%;
+}
+
+.pokeball {
+  display: block;
+  right: 0%;
+  top: 0%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(
+      white 12px,
+      var(--crl-light-gray) 13px 22px,
+      transparent 23px
+    ),
+    linear-gradient(
+      to bottom,
+      white 0 50px,
+      var(--crl-light-gray) 49px 65px,
+      white 66px 100%
+    );
+  border: 18px solid var(--crl-light-gray);
+  box-shadow: inset -16px -8px 0 0 rgba(173, 173, 173, 0.2);
+  transform: rotate(35deg);
+}
