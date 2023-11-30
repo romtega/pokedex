@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <title>PP | Personal Pokedex</title>
   </head>
   <body>
@@ -22,80 +22,46 @@
         <div class="logo"><h1>Pokedex</h1></div>
         <div class="nav-search-bar">
           <ion-icon class="search-icon" name="search-outline"></ion-icon>
-          <input type="text" id="search-input" placeholder="Busca un pokemon" />
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar un pokemon"
+          />
         </div>
         <div class="pokeball"></div>
       </nav>
     </header>
     <main>
-      <section class="section-index grid">
-        <div class="index-card">
-          <p class="number" id="pokemon-number">#001</p>
-          <picture>
-            <img src="#" alt="Bulbasaur" id="pokemon-img" />
-          </picture>
-          <h2 class="heading-seconary" id="pokemon-name">Bulbasaur</h2>
-        </div>
-        <div class="index-card">
-          <picture>
-            <img src="#" alt="Bulbasaur" />
-          </picture>
-          <h2 class="heading-seconary">Bulbasaur</h2>
-          <p class="kind">Planta</p>
-          <p class="number">#001</p>
-        </div>
-        <div class="index-card">
-          <picture>
-            <img src="#" alt="Bulbasaur" />
-          </picture>
-          <h2 class="heading-seconary">Bulbasaur</h2>
-          <p class="kind">Planta</p>
-          <p class="number">#001</p>
-        </div>
-        <div class="index-card">
-          <picture>
-            <img src="#" alt="Bulbasaur" />
-          </picture>
-          <h2 class="heading-seconary">Bulbasaur</h2>
-          <p class="kind">Planta</p>
-          <p class="number">#001</p>
-        </div>
-        <div class="index-card">
-          <picture>
-            <img src="#" alt="Bulbasaur" />
-          </picture>
-          <h2 class="heading-seconary">Bulbasaur</h2>
-          <p class="kind">Planta</p>
-          <p class="number">#001</p>
-        </div>
-        <div class="index-card">
-          <picture>
-            <img src="#" alt="Bulbasaur" />
-          </picture>
-          <h2 class="heading-seconary">Bulbasaur</h2>
-          <span class="kind">Planta</span>
-          <span class="number">#001</span>
-        </div>
-      </section>
+      <section class="section-index grid" id="pokemon-index"></section>
 
-      <section class="section-card hidden">
-        <h1>Bulbasaur</h1>
-        <span class="kind">Planta</span>
-        <span class="number">#001</span>
-        <picture>
-          <img src="#" alt="Bulbasaur" />
-        </picture>
-        <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-          dignissimos illo neque doloremque delectus incidunt vel, quaerat
-          accusantium non cupiditate est iusto corporis sequi nam sint
-          necessitatibus voluptatem quam quia?
-        </p>
-        <div class="stats">
-          <p>Altura</p>
-          <span>2'44"</span>
-          <p>Peso</p>
-          <span>20kg</span>
+      <section class="section-card hidden" id="section-card">
+        <div class="card-pokemon">
+          <div class="pokemon-title">
+            <h1>Bulbasaur</h1>
+            <span class="pokemon-number">#001</span>
+          </div>
+          <div class="pokemon-type">
+            <span class="kind">Planta</span>
+            <span class="kind">Planta</span>
+          </div>
+
+          <picture>
+            <img src="#" alt="Bulbasaur" />
+          </picture>
+          <div class="pokemon-about">
+            <p class="description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              dignissimos illo neque doloremque delectus incidunt vel, quaerat
+              accusantium non cupiditate est iusto corporis sequi nam sint
+              necessitatibus voluptatem quam quia?
+            </p>
+            <div class="pokemon-stats">
+              <p>Altura</p>
+              <span>2'44"</span>
+              <p>Peso</p>
+              <span>20kg</span>
+            </div>
+          </div>
         </div>
       </section>
     </main>

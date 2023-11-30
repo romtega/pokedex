@@ -20,6 +20,8 @@
   --crl--gray: hsl(216, 12%, 22%);
   --crl-light-dark: hsl(213, 19%, 18%);
   --crl-dark: hsl(216, 12%, 8%);
+
+  --border-radius-1: 15px;
 }
 
 *,
@@ -38,8 +40,6 @@ html {
 }
 
 body {
-  /* display: grid;
-  place-items: center; */
   min-height: 100vh;
   font-family: var(--ff-primary);
   font-weight: var(--fw-normal);
@@ -55,6 +55,7 @@ picture {
   vertical-align: middle;
   font-style: italic;
   shape-margin: 1rem;
+  display: block;
 }
 
 input,
@@ -69,6 +70,7 @@ h1,
 h2,
 h3 {
   overflow-wrap: break-word;
+  text-transform: capitalize;
 }
 
 .hidden {
