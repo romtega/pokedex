@@ -6,18 +6,26 @@
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --crl-red: hsl(0, 78%, 62%);
-  --crl-light-red: hsl(0, 78%, 98%);
-  --crl-green: hsl(180, 62%, 55%);
-  --crl-light-green: hsl(180, 62%, 98%);
-  --crl-orange: hsl(34, 97%, 64%);
-  --crl-light-orange: hsl(34, 97%, 98%);
-  --crl-blue: hsl(212, 86%, 64%);
-  --crl-light-blue: hsl(212, 86%, 98%);
+  --crl-red-1: #ffe3e3;
+  --crl-green-1: #d3f9d8;
+  --crl-red-1: #ffe3e3;
+  --crl-blue-1: #d0ebff;
+  --crl-blue-4: #4dabf7;
+  --crl-yellow-1: #fff3bf;
+  --crl-gray-1: #f1f3f5;
+  --crl-gray-4: #ced4da;
+  --crl-lime-1: #e9fac8;
+  --crl-cyan-1: #c5f6fa;
+  --crl-violet-1: #e5dbff;
+  --crl-grape-1: #f3d9fa;
+  --crl-orange-1: #ffe8cc;
+  --crl-teal-1: #c3fae8;
+  --crl-pink-1: #ffdeeb;
+  --crl-indigo-1: #dbe4ff;
 
-  --crl-white: hsl(0, 0%, 100%);
-  --crl-light-gray: hsl(216, 12%, 80%);
-  --crl--gray: hsl(216, 12%, 22%);
+  --crl-white: #fff;
+  --crl-light-gray: #abafaa;
+  --crl-gray: hsl(216, 12%, 22%);
   --crl-light-dark: hsl(213, 19%, 18%);
   --crl-dark: hsl(216, 12%, 8%);
 
@@ -52,10 +60,14 @@ picture {
   /* display: block; Testing of harry roberts default properties for img */
   max-width: 100%;
   height: auto;
-  vertical-align: middle;
   font-style: italic;
   shape-margin: 1rem;
-  display: block;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input,
@@ -73,6 +85,12 @@ h3 {
   text-transform: capitalize;
 }
 
+.heading-secondary {
+  color: var(--crl-gray);
+  font-size: 2.6rem;
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
@@ -83,4 +101,64 @@ h3 {
 
 .grid {
   display: grid;
+}
+
+.grass {
+  background-color: var(--crl-green-1);
+}
+
+.fire {
+  background-color: var(--crl-red-1);
+}
+
+.water {
+  background-color: var(--crl-blue-1);
+}
+
+.electric {
+  background-color: var(--crl-yellow-1);
+}
+
+.ground {
+  background-color: var(--crl-gray-1);
+}
+
+.bug {
+  background-color: var(--crl-lime-1);
+}
+
+.normal {
+  background-color: var(--crl-cyan-1);
+}
+
+.poison {
+  background-color: var(--crl-violet-1);
+}
+
+.fairy {
+  background-color: var(--crl-grape-1);
+}
+
+.fighting {
+  background-color: var(--crl-orange-1);
+}
+
+.psychic {
+  background-color: var(--crl-teal-1);
+}
+
+.rock {
+  background-color: var(--crl-pink-1);
+}
+
+.ghost {
+  background-color: var(--crl-indigo-1);
+}
+
+.ice {
+  background-color: var(--crl-blue-4);
+}
+
+.dragon {
+  background-color: var(--crl-gray-4);
 }
