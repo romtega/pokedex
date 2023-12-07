@@ -43,14 +43,21 @@ function openPokemonCard(e) {
   }
 }
 
+function closePokemonCard(e) {
+  if (e.target === sectionCard) {
+    sectionCard.classList.add("hidden");
+  }
+}
+
 function displayPokemonCard(pokemon) {
   const { name, id, height, weight, types } = pokemon;
   const eachType = types.map((type) => type.type.name);
   const bgColor = types[0].type.name;
   console.log(pokemon);
   const cardHTML = `
-    <div class="card-pokemon ${bgColor}">
-      <div class="pokemon-title">
+    <div class="card-pokemon">
+    <button class="close-button"><ion-icon name="close"></ion-icon></button>
+      <div class="pokemon-title ${bgColor}">
         <h2 class="heading-secondary">${name}</h2>
         <span class="pokemon-number">${id}</span>
       </div>
@@ -61,6 +68,7 @@ function displayPokemonCard(pokemon) {
         )
         .join("")}
       </div>
+    
       <picture>
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png"
@@ -68,16 +76,10 @@ function displayPokemonCard(pokemon) {
         />
       </picture>
       <div class="pokemon-about">
-        <p class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos
-      illo neque doloremque delectus incidunt vel, quaerat accusantium non
-      cupiditate est iusto corporis sequi nam sint necessitatibus voluptatem
-      quam quia?
-        </p>
         <div class="pokemon-stats">
-          <p>Altura</p>
+          <p>Altura:</p>
           <span>${height}</span>
-          <p>Peso</p>
+          <p>Peso:</p>
           <span>${weight}</span>
         </div>
       </div>
@@ -102,6 +104,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=${maxNumPokemon}`)
     loadingSpinner.classList.add("hidden");
 
     sectionIndex.addEventListener("click", openPokemonCard);
+    sectionCard.addEventListener("click", closePokemonCard);
   })
   .catch((error) => {
     console.error("Error fetching Pokemon info:", error);
