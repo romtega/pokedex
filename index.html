@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A nice pokedex for you to check any pokemon you'd like to"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +18,7 @@
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js" defer></script>
     <title>PP | Personal Pokedex</title>
   </head>
   <body>
@@ -26,13 +31,16 @@
             type="text"
             id="search-input"
             placeholder="Buscar un pokemon"
+            aria-label="Buscar un pokemon"
           />
         </div>
         <div class="pokeball"></div>
       </nav>
     </header>
     <main>
-      <section class="section-index grid" id="section-index"></section>
+      <section class="section-index grid" id="section-index">
+        <div class="" id="loading-spinner"></div>
+      </section>
 
       <section class="section-card hidden" id="section-card"></section>
     </main>

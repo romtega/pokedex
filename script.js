@@ -1,6 +1,7 @@
 "use strict";
 
 const maxNumPokemon = 151;
+const loadingSpinner = document.querySelector("#loading-spinner");
 const searchInput = document.querySelector("#search-input");
 
 const sectionIndex = document.querySelector("#section-index");
@@ -51,9 +52,7 @@ function displayPokemonCard(pokemon) {
     <div class="card-pokemon ${bgColor}">
       <div class="pokemon-title">
         <h2 class="heading-secondary">${name}</h2>
-        <span class="pokemon-number">${id} /<span class="pokemon-total"> ${
-    allPokemons.length
-  }</span></span>
+        <span class="pokemon-number">${id}</span>
       </div>
       <div class="pokemon-type">
       ${eachType
@@ -65,7 +64,7 @@ function displayPokemonCard(pokemon) {
       <picture>
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png"
-          alt=""
+          alt="${name}"
         />
       </picture>
       <div class="pokemon-about">
@@ -88,6 +87,7 @@ function displayPokemonCard(pokemon) {
   sectionCard.innerHTML = "";
   sectionCard.insertAdjacentHTML("afterbegin", cardHTML);
 }
+loadingSpinner.classList.remove("hidden");
 
 fetch(`https://pokeapi.co/api/v2/pokemon?limit=${maxNumPokemon}`)
   .then((response) => response.json())
@@ -99,6 +99,11 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=${maxNumPokemon}`)
 
     displayPokemons(allPokemons);
 
+    loadingSpinner.classList.add("hidden");
+
     sectionIndex.addEventListener("click", openPokemonCard);
   })
-  .catch((error) => console.error("Error fetching Pokemon info:", error));
+  .catch((error) => {
+    console.error("Error fetching Pokemon info:", error);
+    loadingSpinner.classList.add("hidden");
+  });
