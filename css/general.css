@@ -1,12 +1,12 @@
 :root {
-  --ff-primary: "Overpass", sans-serif;
+  --ff-primary: "Rubik", sans-serif;
   --ff-secondary: ;
 
   --fw-normal: 400;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
-  --crl-red-1: #ffe3e3;
+  --crl-red-1: #f48080;
   --crl-green-1: #d3f9d8;
   --crl-blue-1: #d0ebff;
   --crl-blue-4: #4dabf7;
@@ -51,12 +51,12 @@ body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-normal);
   line-height: 1.5;
+  background-color: #5c5c5c;
 }
 
 img,
 svg,
 picture {
-  /* display: block; Testing of harry roberts default properties for img */
   max-width: 100%;
   height: auto;
   font-style: italic;
@@ -74,6 +74,7 @@ button,
 textarea,
 select {
   font: inherit;
+  background-color: inherit;
 }
 
 p,

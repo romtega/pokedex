@@ -19,6 +19,7 @@ function displayPokemons(pokemons) {
     const indexGalleryHTML = `
       <div class="index-card ${bgColor}" data-pokemon-index="${i}">
         <p class="pokemon-number flex">#${pokemon.id}</p>
+        <h2 class="heading-secondary">${pokemon.name}</h2>
         <picture>
           <img
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"
@@ -26,7 +27,6 @@ function displayPokemons(pokemons) {
             data-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
           />
         </picture>
-        <h2 class="heading-secondary">${pokemon.name}</h2>
       </div>  
     `;
     sectionIndex.insertAdjacentHTML("beforeend", indexGalleryHTML);
