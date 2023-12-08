@@ -14,16 +14,14 @@ function fetchPokemonData(url) {
 
 function displayPokemons(pokemons) {
   sectionIndex.innerHTML = "";
-  pokemons.forEach((pokemon, i) => {
+  pokemons.forEach((pokemon) => {
     const bgColor = pokemon.types[0].type.name;
     const indexGalleryHTML = `
       <div class="index-card ${bgColor}" id="index-card" data-pokemon-index="${i}">
-        <p class="pokemon-number flex">#${i + 1}</p>
+        <p class="pokemon-number flex">#${pokemon.id}</p>
         <picture>
         <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
-          i + 1
-        }.png"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
         alt="${pokemon.name}"
         />
         </picture>
@@ -53,7 +51,6 @@ function displayPokemonCard(pokemon) {
   const { name, id, height, weight, types } = pokemon;
   const eachType = types.map((type) => type.type.name);
   const bgColor = types[0].type.name;
-  console.log(pokemon);
   const cardHTML = `
     <div class="card-pokemon">
     <button class="close-button"><ion-icon name="close"></ion-icon></button>
@@ -99,9 +96,20 @@ fetch(`https://pokeapi.co/api/v2/pokemon?limit=${maxNumPokemon}`)
   .then((pokemonData) => {
     allPokemons = pokemonData;
 
+    loadingSpinner.classList.add("hidden");
     displayPokemons(allPokemons);
 
-    loadingSpinner.classList.add("hidden");
+    searchInput.addEventListener("input", function () {
+      const searchText = this.value.toLowerCase();
+      if (searchText.trim() === "") {
+        displayPokemons(allPokemons);
+      } else {
+        const filteredPokemons = allPokemons.filter((filteredPokemon) => {
+          return filteredPokemon.name.toLowerCase().includes(searchText);
+        });
+        displayPokemons(filteredPokemons);
+      }
+    });
 
     sectionIndex.addEventListener("click", openPokemonCard);
     sectionCard.addEventListener("click", closePokemonCard);
