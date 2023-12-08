@@ -3,9 +3,9 @@
 const maxNumPokemon = 151;
 const loadingSpinner = document.querySelector("#loading-spinner");
 const searchInput = document.querySelector("#search-input");
-
 const sectionIndex = document.querySelector("#section-index");
 const sectionCard = document.querySelector("#section-card");
+
 let allPokemons = [];
 
 function fetchPokemonData(url) {
@@ -14,21 +14,37 @@ function fetchPokemonData(url) {
 
 function displayPokemons(pokemons) {
   sectionIndex.innerHTML = "";
-  pokemons.forEach((pokemon) => {
+  pokemons.forEach((pokemon, i) => {
     const bgColor = pokemon.types[0].type.name;
     const indexGalleryHTML = `
-      <div class="index-card ${bgColor}" id="index-card" data-pokemon-index="${i}">
+      <div class="index-card ${bgColor}" data-pokemon-index="${i}">
         <p class="pokemon-number flex">#${pokemon.id}</p>
         <picture>
-        <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
-        alt="${pokemon.name}"
-        />
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png"
+            alt="${pokemon.name}"
+            data-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png"
+          />
         </picture>
         <h2 class="heading-secondary">${pokemon.name}</h2>
       </div>  
-      `;
+    `;
     sectionIndex.insertAdjacentHTML("beforeend", indexGalleryHTML);
+
+    const indexCard = sectionIndex.lastElementChild;
+    const imgElement = indexCard.querySelector("img");
+
+    indexCard.addEventListener("mouseenter", () => {
+      let originalSrc = imgElement.dataset.src;
+
+      imgElement.src = originalSrc;
+    });
+
+    indexCard.addEventListener("mouseleave", () => {
+      imgElement.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
+    });
+
+    indexCard.addEventListener("click", openPokemonCard);
   });
 }
 
@@ -86,6 +102,7 @@ function displayPokemonCard(pokemon) {
   sectionCard.innerHTML = "";
   sectionCard.insertAdjacentHTML("afterbegin", cardHTML);
 }
+
 loadingSpinner.classList.remove("hidden");
 
 fetch(`https://pokeapi.co/api/v2/pokemon?limit=${maxNumPokemon}`)

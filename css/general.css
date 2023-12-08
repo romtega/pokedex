@@ -125,61 +125,121 @@ h3 {
 }
 
 .grass {
-  background-color: var(--crl-green-1);
+  background: radial-gradient(
+    circle,
+    hsla(128, 76%, 90%, 1) 0%,
+    hsla(132, 52%, 35%, 1) 100%
+  );
 }
 
 .fire {
-  background-color: var(--crl-red-1);
+  background: radial-gradient(
+    circle,
+    hsla(0, 100%, 95%, 1) 0%,
+    hsla(0, 65%, 48%, 1) 100%
+  );
 }
 
 .water {
-  background-color: var(--crl-blue-1);
+  background: radial-gradient(
+    circle,
+    hsla(206, 100%, 91%, 1) 0%,
+    hsla(209, 75%, 38%, 1) 100%
+  );
 }
 
 .electric {
-  background-color: var(--crl-yellow-1);
+  background: radial-gradient(
+    circle,
+    hsla(49, 100%, 87%, 1) 0%,
+    hsla(31, 100%, 45%, 1) 100%
+  );
 }
 
 .ground {
-  background-color: var(--crl-gray-1);
+  background: radial-gradient(
+    circle,
+    hsla(210, 17%, 95%, 1) 0%,
+    hsla(210, 11%, 15%, 1) 100%
+  );
 }
 
 .bug {
-  background-color: var(--crl-lime-1);
+  background: radial-gradient(
+    circle,
+    hsla(80, 83%, 88%, 1) 0%,
+    hsla(85, 84%, 32%, 1) 100%
+  );
 }
 
 .normal {
-  background-color: var(--crl-cyan-1);
+  background: radial-gradient(
+    circle,
+    hsla(185, 84%, 88%, 1) 0%,
+    hsla(189, 85%, 28%, 1) 100%
+  );
 }
 
 .poison {
-  background-color: var(--crl-violet-1);
+  background: radial-gradient(
+    circle,
+    hsla(257, 100%, 93%, 1) 0%,
+    hsla(255, 53%, 50%, 1) 100%
+  );
 }
 
 .fairy {
-  background-color: var(--crl-grape-1);
+  background: radial-gradient(
+    circle,
+    hsla(287, 77%, 92%, 1) 0%,
+    hsla(288, 54%, 40%, 1) 100%
+  );
 }
 
 .fighting {
-  background-color: var(--crl-orange-1);
+  background: radial-gradient(
+    circle,
+    hsla(33, 100%, 90%, 1) 0%,
+    hsla(17, 87%, 45%, 1) 100%
+  );
 }
 
 .psychic {
-  background-color: var(--crl-teal-1);
+  background: radial-gradient(
+    circle,
+    hsla(160, 85%, 87%, 1) 0%,
+    hsla(162, 88%, 26%, 1) 100%
+  );
 }
 
 .rock {
-  background-color: var(--crl-pink-1);
+  background: radial-gradient(
+    circle,
+    hsla(336, 100%, 94%, 1) 0%,
+    hsla(339, 69%, 38%, 1) 100%
+  );
 }
 
 .ghost {
-  background-color: var(--crl-indigo-1);
+  background: radial-gradient(
+    circle,
+    hsla(225, 100%, 93%, 1) 0%,
+    hsla(230, 57%, 50%, 1) 100%
+  );
 }
 
 .ice {
-  background-color: var(--crl-blue-4);
+  background: radial-gradient(
+    circle,
+    hsla(209, 75%, 38%, 1) 0%,
+    hsla(230, 57%, 50%, 1) 100%
+  );
 }
 
 .dragon {
-  background-color: var(--crl-gray-4);
+  background: radial-gradient(
+    circle,
+    hsla(210, 11%, 15%, 1) 0%,
+    hsla(210, 14%, 83%, 1) 100%
+  );
 }
